@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "ldh_sdk"
+version = "0.0.0"
+description = "Cool project"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE.txt" }
+keywords = ["one", "two"]
+authors = [{ name = "Lerena Holloway" }]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+]
+
+dependencies = ["requests"]
+
+[project.optional-dependencies]
+test = ["pytest < 5.0.0", "pytest-cov[all]"]
+
+[tool.ruff]
+# Set the maximum line length to 79.
+line-length = 79
+
+[tool.ruff.lint]
+# Add the `line-too-long` rule to the enforced rule set. By default, Ruff omits rules that
+# overlap with the use of a formatter, like Black, but we can override this behavior by
+# explicitly adding the rule.
+extend-select = ["E501"]
+select = [
+  # pycodestyle
+  "E",
+  # Pyflakes
+  "F",
+  # pyupgrade
+  "UP",
+  # flake8-bugbear
+  "B",
+  # flake8-simplify
+  "SIM",
+  # isort
+  "I",
+]
