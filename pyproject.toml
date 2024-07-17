@@ -2,7 +2,7 @@
 requires = ["setuptools", "wheel"]
 
 [project]
-name = "ldh_sdk"
+name = "lh_sdk"
 version = "0.0.0"
 description = "Cool project"
 readme = "README.md"
@@ -20,6 +20,12 @@ dependencies = ["requests"]
 
 [project.optional-dependencies]
 test = ["pytest < 5.0.0", "pytest-cov[all]"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+lh_sdk = ["*.json"]
 
 [tool.ruff]
 # Set the maximum line length to 79.

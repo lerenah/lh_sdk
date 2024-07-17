@@ -1,1 +1,1 @@
-include src/ldh_sdk/*.json
+recursive-include src/ldh_sdk/*.json
